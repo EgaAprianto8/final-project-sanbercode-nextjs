@@ -30,8 +30,8 @@ const Login = () => {
 
   return (
     <>
-        <h2 className="w-full text-red-700 font-semibold text-2xl text-center mb-4">LOGIN</h2>
-        <p className="text-red-500 text-center mb-2">{msg && <p>{msg}</p>}</p>
+        <h2 className="w-full text-[#e6a14f] font-semibold text-2xl text-center mb-4">LOGIN</h2>
+        <p className="text-[#e6a14f] text-center mb-2">{msg && <p>{msg}</p>}</p>
       <form onSubmit={Auth} className="flex max-w-md flex-col gap-4">
         <div>
           <TextInput
@@ -46,9 +46,9 @@ const Login = () => {
         <div>
           <TextInput id="password1" placeholder="Password ..." required type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         </div>
-        <Button className="mb-4" color="failure" type="submit">Login</Button>
+        <Button className="mb-4" color="warning" type="submit">Login</Button>
       </form>
-      <p>Do you have account? <Link href="/registerpage" className="font-bold">Register Now</Link></p>
+      <p>Do you have account? <Link href="/registerpage" className="font-bold hover:text-blue-500">Register Now</Link></p>
     </>
   );
 };

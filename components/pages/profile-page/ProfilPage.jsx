@@ -120,9 +120,8 @@ const Profile = () => {
   };
 
   return (
-    <>
+    <div className="mt-32">
       <Card>
-        <div className="flex justify-end px-4 pt-4"></div>
         <div className="flex flex-col items-center pb-10">
           <Avatar
             alt="Bonnie image"
@@ -138,7 +137,7 @@ const Profile = () => {
             {email}
           </span>
         </div>
-        <div>
+        <div className="text-center">
           <p>Email: {email}</p>
           <p>Date of Birth: {dob}</p>
         </div>
@@ -248,7 +247,7 @@ const Profile = () => {
                     </div>
                     <div className="flex gap-3 w-full">
                       <Link
-                        className="w-full bg-cyan-700 text-white rounded-md flex justify-center"
+                        className="w-full bg-green-500 text-white rounded-md flex justify-center"
                         href={`/profile/${filteredPost.id}`}
                       >
                         <button>Edit</button>
@@ -266,7 +265,7 @@ const Profile = () => {
           </div>
         </Card>
       </ul>
-    </>
+    </div>
   );
 };
 

@@ -48,11 +48,11 @@ const ProfileEdit = () => {
   }
 
   return (
-    <>
-      <h1 className="mt-5 p-3 text-2xl font-semibold">FORM EDIT</h1>
-      <div className="shadow-xl p-3">
-        <form onSubmit={handleSubmit} className="flex max-w-md flex-col gap-4">
-          <div className="max-w-md">
+    <div className="mt-36">
+      <h1 className="mt-5 p-3 text-2xl font-semibold text-center">FORM EDIT</h1>
+      <div className="shadow-xl p-3 justify-center items-center flex">
+        <form onSubmit={handleSubmit} className="flex w-full flex-col gap-4 justify-center items-center sm:px-40">
+          <div className="w-full">
             <div className="mb-2 block">
               <Label htmlFor="comment" value="Your description" />
             </div>
@@ -65,12 +65,12 @@ const ProfileEdit = () => {
               onChange={(e) => setDescription(e.target.value)}
             />
           </div>
-          <Button color="success" type="submit">
+          <Button color="warning" type="submit">
             Submit
           </Button>
         </form>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -13,7 +13,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Cookies from "js-cookie";
 import Link from "next/link";
-import HeaderProfile from "@/components/layouts/HeaderProfile";
+
 
 const ChatSection = () => {
   const [posts, setPosts] = useState("");
@@ -106,29 +106,30 @@ const ChatSection = () => {
   };
 
   return (
-    <>
-      <HeaderProfile />
-      <form onSubmit={addPosts} className="flex w-full flex-col gap-4">
-        <div className="max-w-md" id="textarea">
+    <div className="mt-32">
+      <form onSubmit={addPosts} className="flex w-full flex-col gap-4 justify-center items-center sm:px-40">
+        <div className="w-full" id="textarea">
           <div className="mb-2 block">
-            <Label htmlFor="comment" value="Your message" />
+            <Label htmlFor="comment" value="Pesan mu" />
           </div>
           <Textarea
             id="comment"
-            placeholder="Leave a comment..."
+            placeholder="Masukan Pesan"
             required
             rows={4}
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           />
         </div>
+        <div>
         <button
-          className="bg-red-600 text-slate-50 py-3 w-full rounded-lg"
+          className="bg-[#e6a14f] font-bold text-white py-2 px-3 w-full rounded-lg"
           type="submit"
           color="failure"
         >
-          Post
+          Kirim Pesan
         </button>
+        </div>
       </form>
 
       <Card>
@@ -239,7 +240,7 @@ const ChatSection = () => {
             })}
         </div>
       </Card>
-    </>
+    </div>
   );
 };
 

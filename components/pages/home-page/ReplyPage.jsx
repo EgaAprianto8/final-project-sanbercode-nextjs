@@ -66,9 +66,9 @@ const Reply = () => {
   }
 
   return (
-    <div>
-      <form onSubmit={addReply} className="flex w-full flex-col gap-4">
-        <div className="max-w-md" id="textarea">
+    <div className="mt-40">
+      <form onSubmit={addReply} className="flex w-full flex-col gap-4 justify-center items-center sm:px-40">
+        <div className="w-full" id="textarea">
           <div className="mb-2 block">
             <Label htmlFor="comment" value="Replies Post" />
           </div>
@@ -81,7 +81,7 @@ const Reply = () => {
             onChange={(e) => setDescription(e.target.value)}
           />
         </div>
-        <Button type="submit" color="info">
+        <Button className="bg-[#e6a14f]" type="submit" color="info">
           Reply
         </Button>
       </form>
